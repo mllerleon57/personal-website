@@ -1,87 +1,355 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.uxap"
-	xmlns:layout="sap.ui.layout"
-	xmlns:m="sap.m"
-	controllerName="leon.cv.personalcv.controller.MainView"
-	height="100%">
-	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" upperCaseAnchorBar="false">
-		<headerTitle>
-			<ObjectPageDynamicHeaderTitle>
-				<expandedHeading>
-					<m:Title text="Leon Möller" wrapping="true"/>
-				</expandedHeading>
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns:m="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="leon.cv.personalcv.controller.MainView"
+    height="100%"
+>
+    <ObjectPageLayout
+        id="ObjectPageLayout"
+        enableLazyLoading="true"
+        upperCaseAnchorBar="false"
+    >
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:Title
+                        text="Leon Möller"
+                        wrapping="true"
+                    />
+                </expandedHeading>
 
-				<snappedHeading>
-					<m:FlexBox fitContainer="true" alignItems="Center">
-						<m:Avatar src="./assets/me.png" class="sapUiTinyMarginEnd"/>
-						<m:Title text="Leon Möller" wrapping="true"/>
-					</m:FlexBox>
-				</snappedHeading>
+                <snappedHeading>
+                    <m:FlexBox
+                        fitContainer="true"
+                        alignItems="Center"
+                    >
+                        <m:Avatar
+                            src="/assets/me.png"
+                            class="sapUiTinyMarginEnd"
+                        />
+                        <m:Title
+                            text="Leon Möller"
+                            wrapping="true"
+                        />
+                    </m:FlexBox>
+                </snappedHeading>
 
-				<expandedContent>
-					<m:Text text="SAP UI5, Fiori, ABAP Developer"/>
-				</expandedContent>
+                <expandedContent>
+                    <m:Text text="SAP UI5, Fiori &amp; ABAP Expert" />
+                </expandedContent>
 
-				<snappedContent>
-					<m:Text text="SAP UI5, Fiori, ABAP Developer"/>
-				</snappedContent>
+                <snappedContent>
+                    <m:Text text="SAP UI5, Fiori &amp; ABAP Expert" />
+                </snappedContent>
 
-				<snappedTitleOnMobile>
-					<m:Title text="SAP UI5, Fiori, ABAP Developer"/>
-				</snappedTitleOnMobile>
+                <snappedTitleOnMobile>
+                    <m:Title text="SAP UI5, Fiori &amp; ABAP Expert" />
+                </snappedTitleOnMobile>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
 
-				<actions>
-					<m:Button text="Contact me" type="Emphasized"/>
-					<m:OverflowToolbarButton icon="sap-icon://action" type="Transparent" text="Share" tooltip="action"/>
-				</actions>
-			</ObjectPageDynamicHeaderTitle>
-		</headerTitle>
+        <headerContent>
+            <m:FlexBox
+                wrap="Wrap"
+                fitContainer="true"
+            >
+                <m:Avatar
+                    class="sapUiSmallMarginEnd"
+                    src="/assets/me.png"
+                    displaySize="XL"
+                />
 
-		<headerContent>
-			<m:FlexBox wrap="Wrap" fitContainer="true" >
-				<m:Avatar class="sapUiSmallMarginEnd" src="./test-resources/sap/uxap/images/imageID_275314.png" displaySize="L" />
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Inwerken AG" />
+                    <m:Label text="Hannover, Germany" />
+                    <m:ProgressIndicator
+                        width="170px"
+                        percentValue="100"
+                        state="Error"
+                        displayValue="Current capacity: 100%"
+                    />
+                </layout:VerticalLayout>
 
-				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-					<m:Link text="+49 176 856 397 69"/>
-					<m:Link text="mllerleon5@gmail.com"/>
-						<layout:HorizontalLayout>
-							<m:Image src="./test-resources/sap/uxap/images/linkedin.png"/>
-							<m:Image src="./test-resources/sap/uxap/images/Twitter.png" class="sapUiSmallMarginBegin"/>
-						</layout:HorizontalLayout>
-				</layout:VerticalLayout>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label
+                        width="300px"
+                        wrapping="true"
+                        text="SAP Fiori, UI5, and ABAP specialist since 2018, delivering successful consulting and development projects."
+                    />
+                </layout:VerticalLayout>
 
-				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-					<m:Label text="Hello!"/>
-					<m:VBox>
-						<m:Label text="Achieved goals"/>
-						<m:ProgressIndicator percentValue="30" displayValue="30%"/>
-					</m:VBox>
-				</layout:VerticalLayout>
-
-				<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-					<m:Label text="Hannover, Germany"/>
-				</layout:VerticalLayout>
-			</m:FlexBox>
-		</headerContent>
-
-		<sections>
-			<ObjectPageSection titleUppercase="false" title="Personal">
-				<subSections>
-					<ObjectPageSubSection titleUppercase="false">
-						<blocks>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-
-			<ObjectPageSection titleUppercase="false" title="Employment">
-				<subSections>
-					<ObjectPageSubSection title="Employment" titleUppercase="false">
-						<blocks>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-		</sections>
-	</ObjectPageLayout>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Contact" />
+                    <layout:HorizontalLayout>
+                        <m:Image
+                            height="30px"
+                            press=".openUrl('https://www.linkedin.com/in/leon-m%C3%B6ller-70479927b/', true)"
+                            src="/assets/linkedin.svg"
+                        />
+                        <m:Image
+                            height="30px"
+                            press=".openUrl('https://www.xing.com/profile/Leon_Moeller17/cv', true)"
+                            src="/assets/xing.svg"
+                            class="sapUiSmallMarginBegin"
+                        />
+                    </layout:HorizontalLayout>
+                </layout:VerticalLayout>
+            </m:FlexBox>
+        </headerContent>
+        <sections>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Introduction"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="About me" />
+                                        <m:FormattedText
+                                            htmlText="&lt;ul&gt;&lt;li&gt;SAP Fiori, UI5, and ABAP experience since 2018&lt;/li&gt;
+												&lt;li&gt;Delivering successful projects, gaining valuable experience&lt;/li&gt;
+												&lt;li&gt;Eager learner, open communicator, and knowledge sharer&lt;/li&gt;
+												&lt;li&gt;Keeping up with the latest SAP advancements&lt;/li&gt;
+												&lt;li&gt;Willing to expand skills in cloud, analytics, and integration&lt;/li&gt;
+												&lt;li&gt;Excited to connect and collaborate with fellow professionals&lt;/li&gt;
+												&lt;/ul&gt;"
+                                        />
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Areas of expertise"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="Technical" />
+                                        <m:Text
+                                            text="UI5, Fiori, ABAP, CDS, Git SCM, Node.js, JavaScript, TypeScript"
+                                        />
+                                        <m:Label text="SAP Modules" />
+                                        <m:Text
+                                            text="Project System, Production Planning, Plant Maintenance, Human Resources"
+                                        />
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Work experience"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="09/2018 - present" />
+                                        <m:VBox>
+                                            <m:FormattedText
+                                                htmlText="&lt;strong&gt;SAP Developer&lt;strong&gt;"
+                                            />
+                                            <m:Text
+                                                text="Inwerken AG, Isernhagen, Germany"
+                                            />
+                                            <m:Text
+                                                class="sapUiTinyMarginTop"
+                                                text="Consulting, conceptual design, development and maintenance of complex custom UI5 applications and integration of oData services using Test-Driven-Development."
+                                            />
+                                            <m:Text
+                                                class="sapUiTinyMarginTop"
+                                                text="Development in VS code and ABAP for Eclipse."
+                                            />
+                                        </m:VBox>
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Education"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="08/2022 - present" />
+                                        <m:VBox>
+                                            <m:FormattedText
+                                                htmlText="&lt;strong&gt;Business Administration and Business Psychology&lt;/strong&gt;&lt;br&gt;Bachelor of Science"
+                                            />
+                                            <m:Text
+                                                class="sapUiTinyMarginTop"
+                                                text="FOM – Hochschule für Oekonomie und Management, Hannover"
+                                            />
+                                        </m:VBox>
+                                        <m:Label text="09/2018 - 01/2021" />
+                                        <m:VBox>
+                                            <m:FormattedText
+                                                htmlText="&lt;strong&gt;IT specialist in application development&lt;/strong&gt;&lt;br&gt;Apprenticeship"
+                                            />
+                                            <m:Text
+                                                class="sapUiTinyMarginTop"
+                                                text="Inwerken AG, Isernhagen"
+                                            />
+                                        </m:VBox>
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Additional skills"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="Languages" />
+                                        <m:VBox>
+                                            <m:Text
+                                                text="German (Native speaker), English (Fluent in writing, speaking)"
+                                            />
+                                        </m:VBox>
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Private interests"
+            >
+                <subSections>
+                    <ObjectPageSubSection titleUppercase="false">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm
+                                    minWidth="1024"
+                                    maxContainerCols="2"
+                                    editable="false"
+                                    layout="ResponsiveGridLayout"
+                                    labelSpanL="3"
+                                    labelSpanM="3"
+                                    emptySpanL="4"
+                                    emptySpanM="4"
+                                    columnsL="1"
+                                    columnsM="1"
+                                    width="auto"
+                                    class="sapUxAPObjectPageSubSectionAlignContent"
+                                >
+                                    <f:content>
+                                        <m:Label text="Travel" />
+                                        <m:Text
+                                            text="Travel to foreign countries and cultures"
+                                        />
+                                        <m:Label text="Sports" />
+                                        <m:Text
+                                            text="Skiing, mountain biking, road biking, running, hiking"
+                                        />
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
 </mvc:View>
