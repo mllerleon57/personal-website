@@ -28,7 +28,7 @@
                         alignItems="Center"
                     >
                         <m:Avatar
-                            src="assets/me.png"
+                            src="./assets/me.png"
                             class="sapUiTinyMarginEnd"
                         />
                         <m:Title
@@ -59,7 +59,7 @@
             >
                 <m:Avatar
                     class="sapUiSmallMarginEnd"
-                    src="assets/me.png"
+                    src="./assets/me.png"
                     displaySize="XL"
                 />
 
@@ -88,12 +88,12 @@
                         <m:Image
                             height="30px"
                             press=".openUrl('https://www.linkedin.com/in/leon-m%C3%B6ller-70479927b/', true)"
-                            src="assets/linkedin.svg"
+                            src="./assets/linkedin.svg"
                         />
                         <m:Image
                             height="30px"
                             press=".openUrl('https://www.xing.com/profile/Leon_Moeller17/cv', true)"
-                            src="assets/xing.svg"
+                            src="./assets/xing.svg"
                             class="sapUiSmallMarginBegin"
                         />
                     </layout:HorizontalLayout>
