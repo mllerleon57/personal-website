@@ -1,0 +1,2 @@
+sap.ui.define(["./BaseController","sap/m/library"],function(e,n){"use strict";return e.extend("leon.cv.personalcv.controller.MainView",{openUrl:function(e,r){const o=e;const{URLHelper:t}=n;t.redirect(o,r)}})});
+//# sourceMappingURL=MainView.controller.js.map
