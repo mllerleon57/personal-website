@@ -166,7 +166,7 @@
                                     <f:content>
                                         <m:Label text="Technical" />
                                         <m:Text
-                                            text="UI5, Fiori, ABAP, CDS, Git SCM, Node.js, JavaScript, TypeScript"
+                                            text="UI5, Fiori, ABAP, CDS, Git SCM, Node.js, SAP BTP, JavaScript, TypeScript"
                                         />
                                         <m:Label text="SAP Modules" />
                                         <m:Text
@@ -212,7 +212,7 @@
                                             />
                                             <m:Text
                                                 class="sapUiTinyMarginTop"
-                                                text="Consulting, conceptual design, development and maintenance of complex custom UI5 applications and integration of oData services using Test-Driven-Development."
+                                                text="Consulting, conceptual design, development and maintenance of complex custom UI5 applications and integration of oData services using Test-Driven-Development. Extending skills to get ready for SAP BTP"
                                             />
                                             <m:Text
                                                 class="sapUiTinyMarginTop"
